@@ -11,7 +11,7 @@
 <body>
 
     <div id="header" class="col-md-4">
-        <h1>Trivia Game!</h1>
+        <h1>Chicago Trivia Game!</h1>
         <span id="timer"></span>
     </div>
 
@@ -21,36 +21,40 @@
 
     <div id="questions" class="container">
         <p class="first">"In what year did Illinois become the 21st U.S. state?"</p>     
-        <form id="firstChoices">
+        <form id="firstChoice">
             <input type="radio"  name="choice1" value="1815">1815
             <input type="radio" id="answer" name="choice1" value="correct">1818<!--Correct-->
             <input type="radio"  name="choice1" value="1819">1819
             <input type="radio"  name="choice1" value="1820">1820
+        </form>
         <br></br>
 
         <p class="second">How many square miles were destroyed in the Great Chicago Fire of 1871?</p>       
-        
+        <form id="secondChoice">
             <input type="radio" name="choice2" value="2">2
             <input type="radio" name="choice2" value="3">3
             <input type="radio" id="answer" name="choice2" value="4">4<!--Correct-->
             <input type="radio" name="choice2" value="5">5
+        </form>
         <br></br>
 
         <p class="third">The Chicago Cubs are widely known for having the longest championship having not won the World Series since what year?</p>  
-        
+        <form id="thirdChoice">
             <input type="radio" name="choice3" value="1917">1917
             <input type="radio" name="choice3" value="1904">1904
             <input type="radio" id="answer" name="choice3" value="1908">1908<!--Correct-->
             <input type="radio" name="choice3" value="1915">1915
-        <br></br>
+        </form>
+            <br></br>
 
         <p class="fourth">What city is the capital of Illinois?</p>
-        
+        <form id="fourthChoice">
             <input type="radio" name="choice4" value="Springfield">Springfield<!--Correct-->
             <input type="radio" name="choice4" value="Moline">Moline
             <input type="radio" name="choice4" value="Peoria">Peoria
             <input type="radio" name="choice4" value="Champaign">Champaign
         </form>
+        <br></br>
         <button id="submit">submit</button>
     </div>>
 

@@ -1,6 +1,8 @@
 #questions {
-    background-color: aqua;
+    background-color: lightblue;
     margin: auto;
+    width: 600px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     
 }
 
@@ -10,6 +12,9 @@
 
 #header {
     margin: auto;
+    font-family: fantasy;
+    font-weight: bolder;
+    
 }
 
 #display {
@@ -20,6 +25,16 @@
     margin: auto;
 }
 
+
 body {
-    background-color:palevioletred ;
+    background: url("../images/test2.jpg");
+    margin: auto;
+    background-size: cover;
+        
+    }
+
+#submit {
+    margin: auto;
+    width: 250px;
+    margin-left: 150px;
 }

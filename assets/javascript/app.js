@@ -12,7 +12,7 @@ function timer(){
      clearInterval(counter);     
      return;
   }
-   document.getElementById("timer").innerHTML="Time remaining: " + count + "seconds"; 
+   document.getElementById("timer").innerHTML="Time remaining: " + count + " seconds left"; 
 }
 
 var clockRunning = false;
@@ -25,17 +25,49 @@ var clockRunning = false;
 //var questions = $(".first, .second, .third, .fourth");
 //console.log(questions);
 
-//this puts the value of each button in console log
+//this puts the value of each button in console log for Q1
 var userGuess1 = $(function(){
-        $("#firstChoices").click(function() {     
+        $("#firstChoice").click(function() {     
            console.log($("input[name=choice1]:checked").val());
            
         });
+        
     });
+//this puts the value of each button in console log for Q2
+var userGuess2 = $(function(){
+    $("#secondChoice").click(function() {     
+        console.log($("input[name=choice2]:checked").val());
+        
+    });
+    
+});
+//this puts the value of each button in console log for Q3
+var userGuess3 = $(function(){
+    $("#thirdChoice").click(function() {     
+        console.log($("input[name=choice3]:checked").val());
+        
+    });
+    
+});
+
+//this puts the value of each button in console log for Q4
+var userGuess4 = $(function(){
+    $("#fourthChoice").click(function() {     
+        console.log($("input[name=choice4]:checked").val());
+        
+    });
+    
+});
+
+
+
+$(document).on("click", "#answer", function(){
+    userCorrect()
+});
 
     var correctCounter = 0;
     var incorrectCounter = 0;
-    var allAnswered = false;
+    
 
 function userCorrect () {
     if (userGuess1 == "correct") {
@@ -44,7 +76,7 @@ function userCorrect () {
     else {
         incorrectCounter++
     }
-    console.log(correctCounter);
+    console.log(userCorrect);
 }
 
 
