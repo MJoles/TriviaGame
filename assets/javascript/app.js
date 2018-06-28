@@ -1,5 +1,6 @@
-
-
+$("#start").click(function(){
+    $("#questions").empty();
+});
 var score = 0
 //setting clock seconds to 160
 var count = 160
@@ -22,8 +23,11 @@ var clockRunning = false;
  }
 
  //trying to get questions in array
-//var questions = $(".first, .second, .third, .fourth");
-//console.log(questions);
+var questions = $(".first, .second, .third, .fourth");
+$(questions).each(function() {
+    console.log(this)
+})
+console.log(questions);
 
 //this puts the value of each button in console log for Q1
 var userGuess1 = $(function(){
@@ -60,24 +64,25 @@ var userGuess4 = $(function(){
 });
 
 
+/*
+$(document).on("click", ".answer", function(){
+    
+});*/
 
-$(document).on("click", "#answer", function(){
-    userCorrect()
-});
-
+$("#submit").on("click", function(){
     var correctCounter = 0;
     var incorrectCounter = 0;
-    
+       
 
-function userCorrect () {
-    if (userGuess1 == "correct") {
-        correctCounter++
+    function userCorrect () {    
+        if (userGuess1 === "correct") {
+            correctCounter++;
+            $('#win').text(correctCounter);
+            console.log(correctCounter);
+        }
+        else {
+            incorrectCounter++
+            $('#loss').text(incorrectCounter);
+        }
     }
-    else {
-        incorrectCounter++
-    }
-    console.log(userCorrect);
-}
-
-
-
+});
